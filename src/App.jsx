@@ -15,7 +15,7 @@ const metricLabels = ["Timelines","Templates","Governance","ACC Onboarding","ACC
 const podiumBaseHeights = [48, 84, 28];
 
 // Desktop: flexible rationale column with 1fr
-const GRID_DESKTOP = `44px 130px 90px 90px 90px 90px 90px 90px 1fr`;
+const GRID_DESKTOP = `44px 130px 90px 90px 90px 90px 90px 90px minmax(180px, 1fr)`;
 // Mobile: compact fixed columns + 160px rationale — table scrolls horizontally if needed
 const GRID_MOBILE  = `28px 75px 54px 36px 36px 36px 36px 36px 160px`;
 
@@ -648,7 +648,7 @@ export default function App() {
 
           <div style={{ maxWidth:980, margin:"0 auto" }}>
             <div className="table-scroll" style={{ borderRadius:14, border:"1px solid #E2E8F0", boxShadow:"0 2px 12px rgba(0,0,0,0.05)" }}>
-              <div style={{ background:"#FFFFFF", borderRadius:14 }}>
+              <div style={{ background:"#FFFFFF", borderRadius:14, minWidth:"max-content" }}>
                 <div
                   style={{
                     display:"grid",
