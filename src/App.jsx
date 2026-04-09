@@ -12,7 +12,7 @@ const medals = [
 
 const metricKeys   = ["timelines","template","governance","accOnboard","accUtil"];
 const metricLabels = ["Timelines","Templates","Governance","ACC Onboarding","ACC Utilization"];
-const podiumBaseHeights = [48, 84, 28];
+const podiumBaseHeights = [56, 96, 20];
 
 // Desktop: flexible rationale column with 1fr
 const GRID_DESKTOP = `44px 130px 90px 90px 90px 90px 90px 90px minmax(180px, 1fr)`;
@@ -279,7 +279,7 @@ function PodiumCardDesktop({ p, podiumPos, delay }) {
   const cardPad    = ["22px 20px 20px","30px 24px 24px","20px 18px 18px"];
 
   return (
-    <div style={{ display:"flex", flexDirection:"column", justifyContent:"flex-end", flex: isGold ? 1.15 : 1 }}>
+    <div style={{ display:"flex", flexDirection:"column", justifyContent:"flex-end", flex: isGold ? 1.15 : 1, minHeight: isGold ? 420 : 370 }}>
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
