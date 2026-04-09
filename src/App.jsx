@@ -572,7 +572,7 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;800&display=swap');
         * { box-sizing:border-box; }
-        .bg-layer { position:fixed; inset:0; z-index:0; pointer-events:none; background:#F4F7FB; overflow:hidden; }
+        .bg-layer { position:absolute; inset:0; z-index:0; pointer-events:none; background:#F4F7FB; overflow:hidden; }
         .bg-blob  { position:absolute; border-radius:50%; filter:blur(80px); }
         .blob1 { width:650px; height:650px; background:radial-gradient(circle, #a8ccee 0%, #c5ddf5 40%, transparent 70%); opacity:0.6; top:-150px; left:-150px; animation:blobDrift1 20s ease-in-out infinite; }
         .blob2 { width:500px; height:500px; background:radial-gradient(circle, #aecde8 0%, #c8e0f4 40%, transparent 70%); opacity:0.55; bottom:-120px; right:-120px; animation:blobDrift2 25s ease-in-out infinite; }
@@ -648,7 +648,7 @@ export default function App() {
 
           <div style={{ maxWidth:980, margin:"0 auto" }}>
             <div className="table-scroll" style={{ borderRadius:14, border:"1px solid #E2E8F0", boxShadow:"0 2px 12px rgba(0,0,0,0.05)" }}>
-              <div style={{ background:"#FFFFFF", borderRadius:14, minWidth:"max-content" }}>
+              <div style={{ background:"#FFFFFF", borderRadius:14, minWidth:"100%", width:"fit-content" }}>
                 <div
                   style={{
                     display:"grid",
