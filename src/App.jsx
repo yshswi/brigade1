@@ -648,7 +648,7 @@ export default function App() {
 
           <div style={{ maxWidth:980, margin:"0 auto" }}>
             <div className="table-scroll" style={{ borderRadius:14, border:"1px solid #E2E8F0", boxShadow:"0 2px 12px rgba(0,0,0,0.05)" }}>
-              <div style={{ background:"#FFFFFF", borderRadius:14, minWidth:"100%", width:"fit-content" }}>
+              <div style={{ background:"#FFFFFF", borderRadius:14, minWidth: isMobile ? "max-content" : "100%" }}>
                 <div
                   style={{
                     display:"grid",
