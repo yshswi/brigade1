@@ -503,7 +503,7 @@ export default function App() {
   const isMobile = useIsMobile();
 
   useEffect(() => {
-    Papa.parse("./data.csv", {
+    Papa.parse(`./data.csv?v=${Date.now()}`, {
       download: true,
       header: true,
       skipEmptyLines: true,
